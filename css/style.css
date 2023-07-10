@@ -1,0 +1,311 @@
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+
+ul {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+a {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.heading h2 {
+    text-align: center;
+    color: #003E5B;
+}
+
+.detail h2, h4 {
+    color: #003E5B;
+}
+
+/* Navbar */
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #003E5B;
+}
+
+.navbar .logo span {
+    color: #E89A24;
+    font-size: 18px;
+}
+
+.navbar .nav-links ul li {
+    display: inline-block;
+    margin: 20px 0 20px 40px;
+}
+
+.navbar .nav-links ul li a{
+    color: grey;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navbar .nav-links ul li a:hover {
+    color: #003E5B;
+}
+
+.navbar .nav-links ul li ::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #E89A24;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.navbar .nav-links ul li:hover ::after{
+    width: 100%;
+}
+
+.navbar .nav-links .fa-close {
+    display: none;
+    margin: 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.a {
+    height: 3px;
+    width: 25px;
+    background-color: #E89A24;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.fa {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar .nav-links ul li {
+        display: block;
+    }
+
+    .fa {
+        display: inline-block;
+    }
+
+    .navbar .nav-links .fa-close {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+
+    .navbar .nav-links {
+        position: fixed;
+        background-color: #E89A24;
+        height: 100vh;
+        width: 50%;
+        right: -50%;
+        top: 0;
+        z-index: 1000;
+        transition: 1s;
+    }
+    
+    .navbar .nav-links ul li a{
+        color: white;
+    }
+}
+
+/* End Navbar */
+
+/* Hero Section */
+
+#home {
+    position: relative;
+    background: url('../images/Rectangle\ 2.png');  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+hr {
+    margin-top: -20px;
+    width: 35vw;
+    border: none;
+    border-radius: 50%;
+    height: 2px;
+    background-color: #ffffff;
+
+}
+
+.hero .greet h2 {
+    font-size: 35px;
+}
+
+.hero .greet h1 {
+    font-size: 60px;
+    margin: 0;
+}
+
+.hero .greet p {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 786px){ }
+
+/* End Hero Section */
+
+/* Courses */
+
+.course-categories .cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.course-categories .cards .card {
+    display: flex;
+    align-items: center;
+    background: rgb(226, 219, 219);
+    margin: 20px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    flex: 1 1 300px;
+}
+
+.course-categories .cards .card .detail {
+    margin: 20px;
+}
+
+.course-categories .cards .card .detail p {
+    font-size: 12px;
+    width: 120px;
+}
+
+.course-categories .cards .card img {
+    mix-blend-mode: color-burn;
+}
+
+.plans .cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.plans .cards .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F7F7F7;
+    margin: 20px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    flex: 1 1 300px;
+}
+
+.plans .cards .card p {
+    margin: 0;
+}
+
+.plans .cards .card span h2{
+    color: #E89A24;
+}
+
+.plans .cards .card .detail .para {
+    margin-bottom: 100px;
+}
+
+.footer {
+    margin-top: 50px;
+    background-color: black;
+    color: white;
+}
+
+.footer .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.footer .container .information,
+.links {
+    margin-top: 50px;
+}
+
+.footer .container .information,
+.links,
+.contact {
+    flex: 1 1 300px;
+}
+
+.footer .container a {
+    color: white;
+    font-size: 18px;
+}
+
+.footer .container .contact {
+    width: 40%;
+    background: rgb(15, 14, 14);
+    margin-top: 50px;
+}
+
+.footer .container .contact .head h2{
+    text-align: center;
+}
+
+.footer .container .contact input {
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+    width: 90%;
+    margin: 20px;
+}
+
+.footer .container .contact .msg {
+    height: 100px;
+}
+
+.footer .container .contact label {
+    margin: 0 20px;
+}
+
+.footer .foot{
+    padding: 20px;
+    text-align: center;
+}
